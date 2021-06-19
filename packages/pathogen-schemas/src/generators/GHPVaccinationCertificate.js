@@ -12,6 +12,10 @@ const getPatientInfo = () => {
     const subject = getGHPEventRecipient();
     return subject;
 };
+const getVaccinationEventId = () => {
+    const id = faker.random.uuid();
+    return id;
+};
 const getVaxOrder = () => {
     const order = ['1 of 2', '2 of 2', '1 of 1'];
     return order[faker.random.number({ min: 0, max: 2 })];
@@ -20,7 +24,6 @@ const getGender = () => {
     const genderType = faker.random.arrayElement(['male', 'female', 'other', 'unknown']);
     return genderType;
 };
-const getTargetDisease = () => 'ICD-10#J12.82';
 
 const getMarketingAuthHolder = () => {
     const authholders = [
@@ -55,20 +58,21 @@ const getHealthProfessional = () => {
 const example = {
         '@context': ['https://w3id.org/pathogen/v1'],
         type: 'GHPVaccinationCertificate',
+        linkedVaccineEvent: getVaccinationEventId(),
         recipient: getPatientInfo(),
-        ge: getGender(),
-        tg: diseaseType,
-        vd: descType,
-        vt: vaxType,
-        mp: getMedicinalProductName(),
-        ma: getMarketingAuthHolder(),
-        dn: getVaxOrder(),
-        bn: getBatchNumber(),
-        dt: faker.date.between('2021-06-18', '2021-02-01'),
-        ac: getAdministeringCenter(),
-        hp: getHealthProfessional(),
-        co: 'CA',
-        nd: faker.date.between('2021-07-18', '2021-02-01')
+        gender: getGender(),
+        disease: diseaseType,
+        vaccineDescription: descType,
+        vaccineType: vaxType,
+        medicinalProductName: getMedicinalProductName(),
+        marketingAuthorizationHolder: getMarketingAuthHolder(),
+        doseNumber: getVaxOrder(),
+        batchNumber: getBatchNumber(),
+        dateOfVaccination: faker.date.between('2021-06-18', '2021-02-01'),
+        administeringCenter: getAdministeringCenter(),
+        healthProfessional: getHealthProfessional(),
+        nextVaccinationDate: faker.date.between('2021-07-18', '2021-02-01'),
+        countryOfVaccination: 'CA'
     };
     return example;
 };

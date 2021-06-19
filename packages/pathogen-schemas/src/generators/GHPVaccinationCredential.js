@@ -33,16 +33,16 @@ const getMedicinalProductName = () => 'COVID-19 Vaccine';
 const example = {
         '@context': ['https://w3id.org/pathogen/v1'],
         type: 'GHPVaccinationCertificate',
-        linkedVaccineCertificate: '', // calculate hashlink of an example certificate obj in memory
+        linkedVaccineCertificate: faker.random.uuid(),
         recipient: getPatientInfo(),
-        tg: diseaseType,
-        vd: descType,
-        vt: vaxType,
-        mp: getMedicinalProductName(),
-        ma: getMarketingAuthHolder(),
-        dn: getVaxOrder(),
-        dt: faker.date.between('2021-06-18', '2021-02-01'),
-        co: 'CA'
+        disease: diseaseType,
+        vaccineDescription: descType,
+        vaccineType: vaxType,
+        medicinalProductName: getMedicinalProductName(),
+        marketingAuthorizationHolder: getMarketingAuthHolder(),
+        doseNumber: getVaxOrder(),
+        dateOfVaccination: faker.date.between('2021-06-18', '2021-02-01'),
+        countryOfVaccination: 'CA'
     };
     return example;
 };

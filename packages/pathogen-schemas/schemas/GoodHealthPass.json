@@ -23,10 +23,7 @@
             "$comment": "{\"term\": \"lcr\", \"@id\": \"https://w3id.org/pathogen#GHPVaccinationCredential\"}",
             "title": "Associated Credential IDs",
             "description": "Associated credential IDs",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+            "type": "string"
         },
         "recipient": {
             "$comment": "{\"term\": \"recipient\", \"@id\": \"https://w3id.org/pathogen#GHPEventRecipient\"}",
@@ -35,7 +32,7 @@
             "$ref": "https://w3id.org/pathogen/schemas/GHPEventRecipient.json"            
         },
         "status" : {
-            "$comment": "{\"term\": \"recipient\", \"@id\": \"https://w3id.org/pathogen#GHPEventRecipient\"}",
+            "$comment": "{\"term\": \"status\", \"@id\": \"https://w3id.org/pathogen#GoodHealthPass.status\"}",
             "title": "GHP status",
             "description": "GHP status (Boolean)", 
             "type": "boolean"

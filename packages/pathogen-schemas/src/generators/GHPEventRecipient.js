@@ -9,6 +9,7 @@ const getGHPEventRecipient = () => {
     type: 'GHPEventRecipient',
     familyName: faker.name.lastName(),
     givenName: faker.name.firstName(),
+    middleName: faker.name.middleName(),
     birthDate: faker.date.between('1950-01-01', '2004-01-01')
     // gender: genderType
   };

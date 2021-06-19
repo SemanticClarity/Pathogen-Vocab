@@ -84,7 +84,7 @@
                 "description": "Date of vaccination",
                 "type": "string"
             },
-            "administeringCentre": {
+            "administeringCenter": {
                 "$comment": "{\"term\": \"ac\", \"@id\": \"http://www.gs1.org/gln\"}",
                 "title": "Vaccine Administration Center",
                 "description": "Location where vaccination was administered",
@@ -97,13 +97,13 @@
                 "type": "string"
             },
             "nextVaccinationDate": {
-                "$comment": "{\"term\": \"nd\", \"@id\": \"http://hl7.org/fhir/ImmunizationRecommendation.dateCriterion.value\"}",
+                "$comment": "{\"term\": \"nd\", \"@id\": \"https://cvc.canimmunize.ca/v3/ImmunizationRecommendation.dateCriterion.value\"}",
                 "title": "Date of next vaccination",
                 "description": "Date of next vaccination",
                 "type": "string"
             },
             "countryOfVaccination" : {
-                "$comment": "{\"term\": \"co\", \"@id\": \"https://cvc.canimmunize.ca/v3/Immunization.protocolApplied.doseNumber\"}",
+                "$comment": "{\"term\": \"co\", \"@id\": \"http://hl7.org/fhir/ValueSet/iso3166-1-2\"}",
                 "title": "Country of vaccination event",
                 "description": "Country of vaccination",
                 "type": "string"
