@@ -1,0 +1,49 @@
+{
+    "$id": "https://w3id.org/pathogen/schemas/GHPEventRecipient.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$comment": "{\"term\": \"GHPEventRecipient\", \"@id\": \"https://w3id.org/pathogen#GHPEventRecipient\"}",
+    "title": "GHPEventRecipient",
+    "description": "GHP Subject for Vaccination Certificate (Mapped to CA FHIR profiles)",
+    "type": "object",
+    "properties": {
+        "@context": {
+            "type": "array"
+        },
+        "type": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "familyName": {
+          "$comment": "{\"term\": \"fn\", \"@id\": \"http://hl7.org/fhir/ca/baseline/Patient.name.familyName\"}",
+          "title": "Family Name",
+          "description": "Family name of the subject",
+          "type": "string"
+        },
+        "givenName" : {
+          "$comment": "{\"term\": \"gn\", \"@id\": \"http://hl7.org/fhir/ca/baseline/Patient.name.givenName\"}",
+          "title": "Given Name",
+          "description": "Given name of the subject",
+          "type": "string"
+        },
+        "middleName" : {
+            "$comment": "{\"term\": \"mn\", \"@id\": \"http://hl7.org/fhir/ca/baseline/Patient.name.givenName\"}",
+            "title": "Given Name",
+            "description": "Given name or First name may be mapped, depending on profile/extension (Use EntityNamePartQualifier)",
+            "type": "string"
+          },
+        "birthDate" : {
+          "$comment": "{\"term\": \"dob\", \"@id\": \"http://hl7.org/fhir/ca/baseline/Patient.birthDate\"}",
+          "title": "Date of Birth",
+          "description": "Subjects date of birth",
+          "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "examples": []
+}

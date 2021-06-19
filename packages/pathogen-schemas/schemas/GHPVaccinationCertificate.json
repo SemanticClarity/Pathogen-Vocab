@@ -1,0 +1,114 @@
+{
+        "$id": "https://w3id.org/pathogen/schemas/GHPVaccinationCertificate.json",
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$comment": "{\"term\": \"GHPVaccinationCertificate\", \"@id\": \"https://w3id.org/pathogen#GHPVaccinationCertificate\"}",
+        "title": "GHP Vaccination Certificate",
+        "description": "A standard Vaccination cert containing detailed data",
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "array"
+          },
+          "type": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array"
+              }
+            ]
+          },
+           "linkedVaccineEvent": {
+                "$comment": "{\"term\": \"le\", \"@id\": \"https://w3id.org/pathogen#GHPVaccinationCertificate\"}",
+                "title": "Associated vaccination event",
+                "description": "Associated vaccination event",
+                "type":  "string"
+           },
+            "recipient": {
+                "$comment": "{\"term\": \"recipient\", \"@id\": \"https://w3id.org/pathogen#GHPEventRecipient\"}",
+                "title": "Vaccination Recipient",
+                "description": "Vaccination subject (patient) information",
+                "$ref": "https://w3id.org/pathogen/schemas/GHPEventRecipient.json"            
+            },
+            "gender": {
+                "$comment": "{\"term\": \"ge\", \"@id\": \"\"}",
+                "title": "Vaccination Recipient",
+                "description": "Vaccination subject (patient) information"
+            },
+            "disease": {
+                "$comment": "{\"term\": \"tg\", \"@id\": \"http://snomed.info/sct/900000000000003001\"}",
+                "title": "Disease",
+                "description": "Covid19 disease or disorder",
+                "type": "string"
+            },
+            "vaccineDescription": {
+                "$comment": "{\"term\": \"vd\", \"@id\": \"https://cvc.canimmunize.ca/v3/ValueSet/Generic\"}",
+                "title": "Vaccine Description",
+                "description": "Vaccine Description",
+                "type": "string"
+            },
+            "vaccineType" : {
+                "$comment": "{\"term\": \"vt\", \"@id\": \"http://snomed.info/sct/900000000000207008/version/20210131\"}",
+                "title": "Vaccine Type",
+                "description": "Vaccine Type",
+                "type": "string"
+            },
+            "medicinalProductName" : {
+                "$comment": "{\"term\": \"mp\", \"@id\": \"https://cvc.canimmunize.ca/v3/Bundle/Tradename\"}",
+                "title": "Trade Name",
+                "description": "Trade Name",
+                "type": "string"
+            },
+            "marketingAuthorizationHolder" : {
+                "$comment": "{\"term\": \"ma\", \"@id\": \"https://cvc.canimmunize.ca/v3/StructureDefinition/ca-cvc-market-authorization-holder\"}",
+                "title": "Vaccine Manufacturer code",
+                "description": "Vaccine Manufacturer code",
+                "type": "string"
+            },
+            "doseNumber" : {
+                "$comment": "{\"term\": \"dn\", \"@id\": \"https://cvc.canimmunize.ca/v3/Immunization.protocolApplied.doseNumber\"}",
+                "title": "Order or Dose Number",
+                "description": "Order or Dose Number",
+                "type": "string"
+            },
+            "batchNumber": {
+                "$comment": "{\"term\": \"bn\", \"@id\": \"https://cvc.canimmunize.ca/v3/Immunization.lotNumber\"}",
+                "title": "Vaccine Batch or Lot number",
+                "description": "Alphanumeric batch or lot number of the vaccine administered",
+                "type": "string"
+            },
+            "dateOfVaccination" : {
+                "$comment": "{\"term\": \"dt\", \"@id\": \"https://cvc.canimmunize.ca/v3/Immunization.occurenceDateTime\"}",
+                "title": "Date of vaccination event",
+                "description": "Date of vaccination",
+                "type": "string"
+            },
+            "administeringCentre": {
+                "$comment": "{\"term\": \"ac\", \"@id\": \"http://www.gs1.org/gln\"}",
+                "title": "Vaccine Administration Center",
+                "description": "Location where vaccination was administered",
+                "type": "string"
+            },
+            "healthProfessional": {
+                "$comment": "{\"term\": \"hp\", \"@id\": \"https://cvc.canimmunize.ca/v3/ValueSet/HealthcareProviderRoleType\"}",
+                "title": "Identifier referring the health professional",
+                "description": "Health professional reference",
+                "type": "string"
+            },
+            "nextVaccinationDate": {
+                "$comment": "{\"term\": \"nd\", \"@id\": \"http://hl7.org/fhir/ImmunizationRecommendation.dateCriterion.value\"}",
+                "title": "Date of next vaccination",
+                "description": "Date of next vaccination",
+                "type": "string"
+            },
+            "countryOfVaccination" : {
+                "$comment": "{\"term\": \"co\", \"@id\": \"https://cvc.canimmunize.ca/v3/Immunization.protocolApplied.doseNumber\"}",
+                "title": "Country of vaccination event",
+                "description": "Country of vaccination",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false,
+        "examples": []
+}
