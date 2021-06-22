@@ -52,6 +52,7 @@ Object.keys(schemas).forEach((schemaName) => {
                 if (!isValid) {
 //                    if (process.env.VERBOSE_BUILD) {
                         console.warn(`a "good" is not valid according to ${schema.$id}`);
+                        console.warn('ajv errors:', ajv.errors);
 //                    }
                     warnExists = true;
                     if (process.env.STRICT_ERROR_HANDLING) {

@@ -1,9 +1,9 @@
 {
-    "$id": "https://w3id.org/pathogen/schemas/GHPEventRecipient.json",
+    "$id": "https://w3id.org/pathogen/schemas/GoodHealthPass.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$comment": "{\"term\": \"GHPEventRecipient\", \"@id\": \"https://w3id.org/pathogen#GHPEventRecipient\"}",
-    "title": "GHPEventRecipient",
-    "description": "GHP Subject for Vaccination Certificate (Mapped to CA FHIR profiles)",
+    "$comment": "{\"term\": \"GoodHealthPass\", \"@id\": \"https://w3id.org/pathogen#GoodHealthPass\"}",
+    "title": "GoodHealthPass",
+    "description": "Good Health Pass",
     "type": "object",
     "properties": {
         "@context": {
@@ -23,7 +23,7 @@
             "$comment": "{\"term\": \"lcr\", \"@id\": \"https://w3id.org/pathogen#GHPVaccinationCredential\"}",
             "title": "Associated Credential IDs",
             "description": "Associated credential IDs",
-            "type": "string"
+            "type": "array"
         },
         "recipient": {
             "$comment": "{\"term\": \"recipient\", \"@id\": \"https://w3id.org/pathogen#GHPEventRecipient\"}",
@@ -32,7 +32,7 @@
             "$ref": "https://w3id.org/pathogen/schemas/GHPEventRecipient.json"            
         },
         "status" : {
-            "$comment": "{\"term\": \"status\", \"@id\": \"https://w3id.org/pathogen#GoodHealthPass.status\"}",
+            "$comment": "{\"term\": \"st\", \"@id\": \"https://w3id.org/pathogen#GoodHealthPass.status\"}",
             "title": "GHP status",
             "description": "GHP status (Boolean)", 
             "type": "boolean"
